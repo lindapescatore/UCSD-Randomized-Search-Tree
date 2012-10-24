@@ -19,9 +19,6 @@ public:
       RSTNode<Data>* CurrNode = (RSTNode<Data>*)this->root;
       int inserted = 0;
       
-      
-    // TODO: implement this function!
-    // If  RootNode == NULL, tree is empty
     if ( this->root == 0 )
     {
       CurrNode = new RSTNode<Data>( item );
