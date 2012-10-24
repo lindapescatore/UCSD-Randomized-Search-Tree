@@ -30,7 +30,7 @@ cout << "The RSTNode's Priority is: " << poop.priority << endl;
     //    v.push_back(i);
     v.push_back(i);
   }
-
+    
   /* Create an empty instance of RST holding countint */
   RST<countint> r = RST<countint>();
 
@@ -41,6 +41,7 @@ cout << "The RSTNode's Priority is: " << poop.priority << endl;
   cout << "Inserting " << N << " sorted keys in initially empty RST...";
   vector<countint>::iterator vit = v.begin();
   vector<countint>::iterator ven = v.end();
+    random_shuffle( v.begin(), v.end() );
     
     //test
   for(; vit != ven; ++vit) {
@@ -63,7 +64,7 @@ cout << "The RSTNode's Priority is: " << poop.priority << endl;
     cout << "way too many!" << endl;
     return -1;
   }
-
+    sort(v.begin(), v.end());
   /* Test iterator; should iterate the entire tree inorder */
   cout << "Checking traversal using iterator...\n";
   vit = v.begin();
@@ -71,7 +72,7 @@ cout << "The RSTNode's Priority is: " << poop.priority << endl;
   BST<countint>::iterator it = r.begin();
   int i = 0;
   for(; it != en; ++it) {
-    cout << *it << endl;
+    cout << "it=" << *it << "vit=" << *vit << endl;
     if(*it != *vit) {
       cout << endl << "Incorrect inorder iteration of RST." << endl;
       return -1;

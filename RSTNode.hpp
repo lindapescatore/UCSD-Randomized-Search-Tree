@@ -11,7 +11,7 @@ int priority;
   
   RSTNode(Data const & d) : BSTNode<Data>(d) {
     // TODO: implement this constructor!
-    priority = rand(); 
+    priority = rand()%1000;
   }
 
 };

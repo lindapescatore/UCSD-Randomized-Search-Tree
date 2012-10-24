@@ -1,3 +1,4 @@
+
 #ifndef RST_HPP
 #define RST_HPP
 #include "BST.hpp"
@@ -15,21 +16,23 @@ public:
   }
   virtual bool insert(const Data& item) 
   {
+      RSTNode<Data>* CurrNode = (RSTNode<Data>*)this->root;
+      int inserted = 0;
+      
+      
     // TODO: implement this function!
     // If  RootNode == NULL, tree is empty
     if ( this->root == 0 )
     {
-      this->root = new RSTNode<Data>( item );
+      CurrNode = new RSTNode<Data>( item );
+      this->root = CurrNode;
       (this->isize)++;
-      return 1; //Or item?
+      inserted++;
     }
 
     // 2. Set CurrNode = RootNode. 
     else
     {
-      RSTNode<Data>* CurrNode = (RSTNode<Data>*)this->root;
-      int inserted = 0;
-
       while( 1 )
       {
         /* 3. If k < CurrNode.key ...   key must go in left subtree
@@ -75,40 +78,48 @@ public:
         //5.  else Found the key 
         break;
       }
-
+    }
+      
+      
+      
       if( inserted )
       {
-        /* Rotate up as needed */
-        while( 1 )
-        {
-          /* If it has become the root, then youre done */ 
-          if( CurrNode->parent == 0 )
+          /* Rotate up as needed */
+          while( 1 )
           {
-            this->root = CurrNode;
-            break; 
+              /* If it has become the root, then youre done */
+              if( CurrNode->parent == 0 )
+              {
+                  this->root = CurrNode;
+                  break;
+              }
+              /* Check if unbalanced */
+              if( ((RSTNode<Data>*)CurrNode)->priority > ((RSTNode<Data>*)CurrNode->parent)->priority )
+              {
+                  /* Check if CurrNode is it's parent's right or left node */
+                  if( CurrNode == CurrNode->parent->right)
+                  {
+                      CurrNode = rotateWithRightChild( (RSTNode<Data>*)CurrNode->parent );
+                      continue;
+                  }
+                  /* It's the Parent's Left */
+                  else
+                  {
+                      CurrNode = rotateWithLeftChild( (RSTNode<Data>*)CurrNode->parent );
+                      continue;
+                  }
+              } 
+              
+              break;
           }
-          /* Check if unbalanced */ 
-          if( ((RSTNode<Data>*)CurrNode)->priority > ((RSTNode<Data>*)CurrNode->parent)->priority )
-          {
-            /* Check if CurrNode is it's parent's right or left node */ 
-            if( CurrNode == CurrNode->parent->right)
-            {
-              CurrNode = rotateWithRightChild( (RSTNode<Data>*)CurrNode->parent );
-              continue;
-            }
-            /* It's the Parent's Left */
-            else
-            {
-              CurrNode = rotateWithLeftChild( (RSTNode<Data>*)CurrNode->parent );
-              continue;
-            }
-          } 
-          
-          break;
-        }
-        return 1;
+          return 1;
       }
-    }
+      
+      
+      
+      
+      
+      
       return 0;
   }
 

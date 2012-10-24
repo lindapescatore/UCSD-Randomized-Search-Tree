@@ -35,26 +35,39 @@ public:
    ** or 0 if there is none.
    */ // TODO
   BSTNode<Data>* successor() {
+    /* Temp, Parent, CurrNode */
+    BSTNode<Data>* T;
+    BSTNode<Data>* P;
+    BSTNode<Data>* X;
 
-    // X has a right child
-    if( right != 0 )
-      return this->right;
+    /* X has a right child */
+    if ( right != 0 ){
+      T = right;
 
-    // X has no right child, and has no parent
-    if( parent == 0)
-        return 0;
+      /* Check for left-most */
+      while( T->left != 0 ) {
+        T = T->left;
+      }
 
-    // X has no right child, and is the left child of its parent
-    if( this->parent->left != 0 && this->data == this->parent->left->data )
-      return this->parent;
+      return T;
+    }
 
-    // X has no right child, and is the right child of its parent
-    if( this->parent->right!= 0 && this->data == this->parent->right->data )
+    /* X has no right child; check for left cases */
+    else {
+      X = this;
+      P = parent;
+
+      /* Traverse upwards until root */
+      while( P != 0 ) {
+        if ( P->left == X )
+          return P;
+        X = P;
+        P = P->parent; 
+      } 
+
       return 0;
-
-    return 0;
+    }
   }
-
 }; 
 
 /** Overload operator<< to print a BSTNode's fields to an ostream. */
