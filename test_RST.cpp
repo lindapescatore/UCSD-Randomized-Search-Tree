@@ -41,6 +41,8 @@ cout << "The RSTNode's Priority is: " << poop.priority << endl;
   cout << "Inserting " << N << " sorted keys in initially empty RST...";
   vector<countint>::iterator vit = v.begin();
   vector<countint>::iterator ven = v.end();
+    
+    //test
   for(; vit != ven; ++vit) {
     // all these inserts are unique, so should return true
     if(! r.insert(*vit) ) {
