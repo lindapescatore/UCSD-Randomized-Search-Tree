@@ -6,10 +6,31 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		DC9F10601637B8310078AD7B /* BST.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BST.hpp; sourceTree = "<group>"; };
+		DC9F10611637B8310078AD7B /* BSTIterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BSTIterator.hpp; sourceTree = "<group>"; };
+		DC9F10621637B8310078AD7B /* BSTNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BSTNode.hpp; sourceTree = "<group>"; };
+		DC9F10631637B8310078AD7B /* countint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = countint.cpp; sourceTree = "<group>"; };
+		DC9F10641637B8310078AD7B /* countint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = countint.hpp; sourceTree = "<group>"; };
+		DC9F10651637B8310078AD7B /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		DC9F10661637B8310078AD7B /* RST.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RST.hpp; sourceTree = "<group>"; };
+		DC9F10671637B8310078AD7B /* RSTNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RSTNode.hpp; sourceTree = "<group>"; };
+		DC9F10681637B8310078AD7B /* test_RST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_RST.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		DC9F10531637B80C0078AD7B = {
 			isa = PBXGroup;
 			children = (
+				DC9F10601637B8310078AD7B /* BST.hpp */,
+				DC9F10611637B8310078AD7B /* BSTIterator.hpp */,
+				DC9F10621637B8310078AD7B /* BSTNode.hpp */,
+				DC9F10631637B8310078AD7B /* countint.cpp */,
+				DC9F10641637B8310078AD7B /* countint.hpp */,
+				DC9F10651637B8310078AD7B /* Makefile */,
+				DC9F10661637B8310078AD7B /* RST.hpp */,
+				DC9F10671637B8310078AD7B /* RSTNode.hpp */,
+				DC9F10681637B8310078AD7B /* test_RST.cpp */,
 			);
 			sourceTree = "<group>";
 		};
