@@ -16,12 +16,14 @@
 		DC9F10661637B8310078AD7B /* RST.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RST.hpp; sourceTree = "<group>"; };
 		DC9F10671637B8310078AD7B /* RSTNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RSTNode.hpp; sourceTree = "<group>"; };
 		DC9F10681637B8310078AD7B /* test_RST.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_RST.cpp; sourceTree = "<group>"; };
+		DC9F10701638BBEA0078AD7B /* benchtree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = benchtree.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		DC9F10531637B80C0078AD7B = {
 			isa = PBXGroup;
 			children = (
+				DC9F10701638BBEA0078AD7B /* benchtree.cpp */,
 				DC9F10601637B8310078AD7B /* BST.hpp */,
 				DC9F10611637B8310078AD7B /* BSTIterator.hpp */,
 				DC9F10621637B8310078AD7B /* BSTNode.hpp */,
@@ -167,6 +169,7 @@
 				DC9F105F1637B80C0078AD7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
