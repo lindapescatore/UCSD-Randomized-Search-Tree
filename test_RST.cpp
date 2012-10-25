@@ -15,10 +15,7 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-RSTNode<int> poop = RSTNode<int>( 5 );
-cout << "The RSTNode's Priority is: " << poop.priority << endl;
-
-  int N = 1000;
+  int N = 3;
   if(argc > 1) N = atoi(argv[1]);
   // a good RST implementation should need no more than this number
   // of key comparisons when inserting N keys
@@ -41,7 +38,7 @@ cout << "The RSTNode's Priority is: " << poop.priority << endl;
   cout << "Inserting " << N << " sorted keys in initially empty RST...";
   vector<countint>::iterator vit = v.begin();
   vector<countint>::iterator ven = v.end();
-    random_shuffle( v.begin(), v.end() );
+random_shuffle( v.begin(), v.end() );
     
     //test
   for(; vit != ven; ++vit) {
@@ -72,7 +69,7 @@ cout << "The RSTNode's Priority is: " << poop.priority << endl;
   BST<countint>::iterator it = r.begin();
   int i = 0;
   for(; it != en; ++it) {
-    cout << "it=" << *it << "vit=" << *vit << endl;
+    //cout << "it=" << *it << "vit=" << *vit << endl;
     if(*it != *vit) {
       cout << endl << "Incorrect inorder iteration of RST." << endl;
       return -1;

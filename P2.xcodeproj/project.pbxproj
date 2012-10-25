@@ -39,6 +39,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
+		DC52AA8516391C21005B4B41 /* benchTree */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = benchtree;
+			buildConfigurationList = DC52AA8816391C21005B4B41 /* Build configuration list for PBXLegacyTarget "benchTree" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = benchTree;
+			passBuildSettingsInEnvironment = 1;
+			productName = benchTree;
+		};
 		DC9F105A1637B80C0078AD7B /* P2 */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION)";
@@ -73,11 +87,35 @@
 			projectRoot = "";
 			targets = (
 				DC9F105A1637B80C0078AD7B /* P2 */,
+				DC52AA8516391C21005B4B41 /* benchTree */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
+		DC52AA8616391C21005B4B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC52AA8716391C21005B4B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		DC9F105B1637B80C0078AD7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -132,6 +170,7 @@
 		DC9F105E1637B80C0078AD7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUGGING_SYMBOLS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -144,6 +183,7 @@
 		DC9F105F1637B80C0078AD7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -153,6 +193,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DC52AA8816391C21005B4B41 /* Build configuration list for PBXLegacyTarget "benchTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC52AA8616391C21005B4B41 /* Debug */,
+				DC52AA8716391C21005B4B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DC9F10581637B80C0078AD7B /* Build configuration list for PBXProject "P2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

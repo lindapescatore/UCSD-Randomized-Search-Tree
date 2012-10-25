@@ -13,6 +13,9 @@ LDFLAGS= -g
 rst: test_RST.o countint.o
 	g++ -o rst test_RST.o countint.o
 
+benchtree: benchtree.cpp countint.o
+	g++ -g -o benchtree benchtree.cpp countint.o
+
 test_RST.o: BST.hpp BSTNode.hpp BSTIterator.hpp RST.hpp RSTNode.hpp
 
 countint.o: countint.cpp countint.hpp
