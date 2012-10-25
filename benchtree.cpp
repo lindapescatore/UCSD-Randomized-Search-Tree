@@ -8,19 +8,24 @@
 
 #include "BST.hpp"
 #include "RST.hpp"
+#include <iostream>
 #include <stdio.h>
+#include <stdlib.h> 
+#include <math.h>
 #include <string.h>
 #include <set>
 
-void bstEval( argv[1], argv[2], argv[3] ){
+using namespace std;
+
+void bstEval( char* order, double numOfNodes, double numOfTests ){
     //Add Code
 }
 
-void rstEval( argv[1], argv[2], argv[3] ){
+void rstEval( char* order, double numOfNodes, double numOfTests ){
     //Add Code
 }
 
-void sttEval( argv[1], argv[2], argv[3] ){
+void setEval( char* order, double numOfNodes, double numOfTests ){
     //Add Code
 }
 
@@ -40,22 +45,25 @@ int main(int argc, char** argv) {
         return -1;
     }
     
-    if( 0 )
+    double nodes = atof( argv[3] );
+    double trials = atof( argv[4] );
+    
+    if( fmod( sqrt( nodes + 1.0 ), 1.0 ) != 0.0 )
     {
-        cout << "Argument 3 must be of root2-1\n";
-        throw "Argument 3 must be of root2-1\n";
+        cout << "Argument 3 must be of root2(n-1)\n";
+        throw "Argument 3 must be of root2(n-1)\n";
         return -1;
     }
     if ( strcmp( argv[1], "bst" ) == 0 ) {
-        //bstEval( argv[1], argv[2], argv[3] );
+        //bstEval( argv[1], nodes, trials );
         cout << "bst\n";
     }
     else if ( strcmp( argv[1], "rst" ) == 0 ) {
-        //rstEval( argv[1], argv[2], argv[3] );
+        //rstEval( argv[1], nodes, trials );
         cout << "rst\n";
     }
     else if ( strcmp( argv[1], "set" ) == 0 ) {
-        //setEval( argv[1], argv[2], argv[3] );
+        //setEval( argv[1], nodes, trials );
         cout << "set\n";
     }
     else
