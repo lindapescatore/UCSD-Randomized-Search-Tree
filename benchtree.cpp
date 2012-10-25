@@ -1,3 +1,4 @@
+
 //
 //  benchtree.cpp
 //  P2
@@ -58,7 +59,8 @@ double processRST( std::vector<countint> v, double N )
     for(vit = v.begin(); vit != ven; ++vit) {
         s.find(*vit);
     }
-    return countint::getcount()/N;
+    double avg = countint::getcount()/N;
+    return avg;
 }
 
 double processSET( std::vector<countint> v, double N )
@@ -175,7 +177,7 @@ int main(int argc, char** argv) {
         /*Calc STD-DEV */
         avgComp = avgComp/trials;
         avgCompSq = avgCompSq/trials;
-        double stdDev = sqrt( avgCompSq - ( avgComp * avgComp ) );
+        double stdDev = sqrt( abs( avgCompSq - ( avgComp * avgComp ) ) );
 
         /* Print Output */
         printf( "%6i\t " , (int)k-1 );

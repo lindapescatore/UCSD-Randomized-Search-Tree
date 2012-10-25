@@ -24,7 +24,8 @@ public:
       CurrNode = new RSTNode<Data>( item );
       this->root = CurrNode;
       (this->isize)++;
-      inserted++;
+        inserted = 0;
+      return 1;
     }
 
     // 2. Set CurrNode = RootNode. 
@@ -44,8 +45,7 @@ public:
             CurrNode->left->parent = CurrNode;
             CurrNode = (RSTNode<Data>*)CurrNode->left;
             (this->isize)++;
-            inserted++;
-            break; 
+            return 1;
           }
 
           CurrNode = (RSTNode<Data>*)CurrNode->left;
